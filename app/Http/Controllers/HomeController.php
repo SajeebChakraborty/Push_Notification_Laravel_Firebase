@@ -39,9 +39,9 @@ class HomeController extends Controller
     public function sendNotification(Request $request)
     {
         $firebaseToken = User::whereNotNull('device_token')->pluck('device_token')->all();
-          
+        
         $SERVER_API_KEY = 'XXXXXX';
-  
+
         $data = [
             "registration_ids" => $firebaseToken,
             "notification" => [
