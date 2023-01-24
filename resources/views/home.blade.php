@@ -70,6 +70,7 @@
                 });
   
                 $.ajax({
+                    
                     url: '{{ route("save-token") }}',
                     type: 'POST',
                     data: {
@@ -96,7 +97,7 @@
             body: payload.notification.body,
             icon: payload.notification.icon,
         };
-        
+
         new Notification(noteTitle, noteOptions);
 
     });
