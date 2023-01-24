@@ -39,7 +39,7 @@ class HomeController extends Controller
     public function sendNotification(Request $request)
     {
         $firebaseToken = User::whereNotNull('device_token')->pluck('device_token')->all();
-        
+
         $SERVER_API_KEY = 'XXXXXX';
 
         $data = [
@@ -50,7 +50,6 @@ class HomeController extends Controller
             ]
         ];
         $dataString = json_encode($data);
-    
         $headers = [
             'Authorization: key=' . $SERVER_API_KEY,
             'Content-Type: application/json',
