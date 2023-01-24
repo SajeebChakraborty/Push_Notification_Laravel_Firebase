@@ -90,13 +90,14 @@
      }  
       
     messaging.onMessage(function(payload) {
-        
+
         const noteTitle = payload.notification.title;
         const noteOptions = {
             body: payload.notification.body,
             icon: payload.notification.icon,
         };
         new Notification(noteTitle, noteOptions);
+        
     });
    
 </script>
